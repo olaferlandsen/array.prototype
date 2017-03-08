@@ -1,4 +1,22 @@
-API:
+# API:
+* [column](#column)
+* [empty](#empty)
+* [last](#last)
+* [exists](#exists)
+* [exists](#exists)
+* [get](#get)
+* [isEmpty](#isEmpty)
+* [left](#isEmpty)
+* [move](#isEmpty)
+* [remove](#remove)
+* [right](#right)
+* [shuffle](#shuffle)
+* [start](#start)
+* [sum](#sum)
+* [down](#down)
+* [first](#first)
+* [last](#last)
+* [up](#up) - Alias of [left](#left)
 
 ### `array` Array.prototype.column (`index`)
 Return the values from a single column
