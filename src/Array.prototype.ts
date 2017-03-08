@@ -16,6 +16,7 @@ interface Array<T> {
 	shuffle ():Array<any>;
 	sum     ():number;
 	column  (col:number):Array<any>;
+	replace (from, to);
 }
 /**
  * Check if item exists by index
@@ -148,4 +149,18 @@ Array.prototype.sum = function ():number {
  * */
 Array.prototype.column = function (col:number):Array<any> {
 	return this.map(x => x[col])
+};
+/**
+ * Replace items fro new value is equal to ...
+ *
+ * @param {array} from
+ * @param {array} to
+ * @return array
+ * */
+Array.prototype.replace = function (from:Array<any>, to:Array<any>) {
+	this.forEach((value, index) => {
+		let fromIndex = from.indexOf( value );
+		if (fromIndex !== -1 && to.exists(index)) this[index] = to[index];
+	});
+	return this;
 };
